@@ -70,13 +70,13 @@ body {
 }
 
 .logo-image {
-  width: 40px; /* Adjust the size as needed */
-  margin-right: 10px; /* Adjust the spacing as needed */
+  width: 40px; 
+  margin-right: 10px; 
 }
 
 .logo-text {
   margin: 0;
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 24px; 
 }
 
 .Mainnav .navbar .navbar-toggler{
@@ -118,7 +118,7 @@ body {
 }
 .Mainnav .navbar .dropdown-menu{
   margin-top: 12px !important;
-  
+
 }
 .Mainnav nav{
   background-color: rgb(53, 50, 50);
@@ -1537,7 +1537,7 @@ body {
   
 
  /* user starts  */
- .usermain .user-container {
+ /* .usermain .user-container {
   background-color: #f7f7f7;
 }
 
@@ -1555,8 +1555,12 @@ body {
 .usermain .user-card-header:hover {
   background-color: #d17d31;
   transition: background-color 0.3s ease;
+} */
+.usermain1 .card{
+  transform: scale(1) !important;
+  box-shadow: 4px 4px 10px gray !important;
+  background-color: #ccade1;
 }
-
  /* user ends */
 
  /* loading animation starts */
