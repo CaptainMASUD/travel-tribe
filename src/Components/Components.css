@@ -60,7 +60,10 @@ body {
   }
 }
 
+
+
 /* navbar starts */
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -93,7 +96,6 @@ body {
   background-color: rgba(0, 0, 0, 0.801) !important;
   overflow: hidden;
   max-height: 200px; 
-
 }
 .dropdown-menu a:hover{
   color: #FFA931 !important ;
@@ -109,10 +111,14 @@ body {
 }
 .Mainnav .dropdown-item.active {
   color: #FFA931 !important;
- 
+  background: none;
 }
 .Mainnav nav .offcanvas-body ul{
     margin-top: -10px;
+}
+.Mainnav .navbar .dropdown-menu{
+  margin-top: 12px !important;
+  
 }
 .Mainnav nav{
   background-color: rgb(53, 50, 50);

@@ -10,6 +10,10 @@ function Nav() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div className="Mainnav">
@@ -50,7 +54,7 @@ function Nav() {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3" style={{ fontSize: '1rem' }}>
                   <li className="nav-item">
-                    <NavLink to="/" className="nav-link mt-lg-3" activeClassName="active" onClick={toggleMenu}>
+                    <NavLink to="/" className="nav-link mt-lg-3" activeClassName="active" onClick={closeMenu}>
                       <i className="fa-solid fa-house-circle-check"></i> Home
                     </NavLink>
                   </li>
@@ -63,45 +67,44 @@ function Nav() {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       activeClassName="active"
-                      onClick={toggleMenu}
                     >
                       <i className="fa-brands fa-servicestack"></i> Our Packages
                     </NavLink>
                     <ul className="dropdown-menu dropdown-menu-end w-200 mt-2" aria-labelledby="navbarDropdown">
                       <li>
-                        <NavLink to="/populardestinations" className="dropdown-item" activeClassName="active" onClick={toggleMenu}>
+                        <NavLink to="/populardestinations" className="dropdown-item" activeClassName="active" onClick={closeMenu}>
                           <i className="fa-solid fa-map-location-dot"></i> Popular Destinations
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/bookdestinations" className="dropdown-item" activeClassName="active" onClick={toggleMenu}>
+                        <NavLink to="/bookdestinations" className="dropdown-item" activeClassName="active" onClick={closeMenu}>
                           <i className="fa-brands fa-elementor"></i>  Event Destinations
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/custompackages" className="dropdown-item" activeClassName="active" onClick={toggleMenu}>
+                        <NavLink to="/custompackages" className="dropdown-item" activeClassName="active" onClick={closeMenu}>
                           <i className="fa-solid fa-sliders"></i>  Custom Packages
                         </NavLink>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/student" className="nav-link mt-lg-3" activeClassName="active" onClick={toggleMenu}>
+                    <NavLink to="/student" className="nav-link mt-lg-3" activeClassName="active" onClick={closeMenu}>
                       <i className="fa-solid fa-user-tag"></i> Student Offers
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/otherservices" className="nav-link mt-lg-3" activeClassName="active" onClick={toggleMenu}>
+                    <NavLink to="/otherservices" className="nav-link mt-lg-3" activeClassName="active" onClick={closeMenu}>
                       <i className="fa-solid fa-bars-progress"></i> Other Services
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/aboutus" className="nav-link mt-lg-3" activeClassName="active" onClick={toggleMenu}>
+                    <NavLink to="/aboutus" className="nav-link mt-lg-3" activeClassName="active" onClick={closeMenu}>
                       <i className="fa-brands fa-square-pied-piper"></i>  About us
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/login" className="nav-link mt-lg-3" activeClassName="active" onClick={toggleMenu}>
+                    <NavLink to="/login" className="nav-link mt-lg-3" activeClassName="active" onClick={closeMenu}>
                       <i className="fa-regular fa-user"></i>
                     </NavLink>
                   </li>
