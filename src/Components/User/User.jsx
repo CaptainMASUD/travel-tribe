@@ -37,34 +37,35 @@ function User() {
   };
 
   return (
-    <div className="container  mt-5 mb-5 usermain1">
+    <div className="container mt-5 mb-5 usermain1">
       {userData ? (
-        <div className="card" style={{ margin: '0 auto',marginBottom:"50px" }}>
+        <div className="card col-12 col-md-8 mx-auto" style={{ marginBottom: "50px" }}>
           <div className="card-header">
             <h2>User Profile</h2>
           </div>
           <div className="card-body">
             <div className="row">
-              <div className="col-md-4 d-flex justify-content-center align-items-center flex-column">
+              <div  className="col-md-4 d-flex justify-content-center align-items-center flex-column">
                 {showInput && (
-                  <div>
+                  <div >
                     <label htmlFor="profileImage" className="form-label">Upload Profile Picture</label>
                     <input
                       type="file"
-                      className="form-control"
+                      className="form-control fs1"
                       id="profileImage"
                       accept="image/*"
+                     
                       onChange={handleImageChange}
                     />
                   </div>
                 )}
                 {profileImage && (
-                  <div className="text-center">
+                  <div  className="text-center">
                     <img src={profileImage} alt="Profile" className="img-fluid rounded-circle mt-0 mb-3" style={{ width: '150px', height: '150px', marginBottom: '15px' }} />
                     <p className="mb-0"><strong>{userData.name}</strong></p>
                   </div>
                 )}
-                <button className="btn btn-danger mb-3" style={{marginTop:"20px"}} onClick={handleLogout}>Logout</button>
+                <button className="btn btn-danger mb-3" style={{ marginTop: "20px" }} onClick={handleLogout}>Logout</button>
                 <button className="btn btn-warning" onClick={handleDeleteAccount}>Delete Account</button>
               </div>
               <div className="col-md-8">
