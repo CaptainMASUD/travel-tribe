@@ -75,16 +75,18 @@ body {
   margin: 0;
   font-size: 24px; /* Adjust the font size as needed */
 }
-.Mainnav .navbar-toggler-icon{
-  background-color: rgb(214, 108, 21);
-  padding: 15px !important;
-  box-shadow: none !important;
+
+.Mainnav .navbar .navbar-toggler{
+  background-color: #AD88C6;
+  color: blue !important;
+  font-size: 1.2rem;
+}
+.Mainnav .navbar-toggler-icon:focus{
   outline: none !important;
-  border-radius: 3px;
 }
 
 .offcanvas-header .btn-close{
-  background-color: rgb(214, 108, 21);
+  background-color: #AD88C6;
 }
 
 .dropdown-menu {
@@ -1585,5 +1587,12 @@ body {
 }
 .mines .icon-container {
   display: flex !important;
+}
+@media only screen and (max-width: 768px) {
+  .mines .icon-container{
+    margin-left: 36%;
+    
+   
+}
 }
  /* loading animation ends */
