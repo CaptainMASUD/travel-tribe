@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import '../Components.css'
+import '../Components.css';
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -10,6 +10,7 @@ function ForgotPassword() {
   const [message, setMessage] = useState('');
   const [showResetForm, setShowResetForm] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [passwordStrength, setPasswordStrength] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -17,6 +18,7 @@ function ForgotPassword() {
 
   const handleNewPasswordChange = (e) => {
     setNewPassword(e.target.value);
+    checkPasswordStrength(e.target.value);
   };
 
   const handleConfirmPasswordChange = (e) => {
@@ -50,8 +52,22 @@ function ForgotPassword() {
       localStorage.setItem('userData', JSON.stringify(userData));
       setMessage('Password successfully reset.');
       setShowResetForm(false);
+      setEmail('');
     } else {
       setMessage('No user data found.');
+    }
+  };
+
+  const checkPasswordStrength = (password) => {
+    const regexSpecial = /[!@#$%^&*(),.?":{}|<>]/g;
+    const regexUpper = /[A-Z]/g;
+
+    if (password.match(regexSpecial) && password.match(regexUpper) && password.length >= 8) {
+      setPasswordStrength('Super Strong');
+    } else if (password.match(regexSpecial) || password.match(regexUpper) || password.length >= 8) {
+      setPasswordStrength('Strong');
+    } else {
+      setPasswordStrength('normal');
     }
   };
 
@@ -75,6 +91,7 @@ function ForgotPassword() {
                   <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
                 </button>
               </div>
+              {passwordStrength && <div className="password-strength" style={{color:'#B3FFAE'}}>{passwordStrength} Password</div>}
             </div>
             <div className="mb-3">
               <label htmlFor="confirmPassword" className="form-label">Confirm Password:</label>
