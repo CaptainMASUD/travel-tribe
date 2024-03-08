@@ -20,6 +20,7 @@ import BookDestinatoins from './Components/BookDestinations/BookDestinatoins';
 import Payment from './Components/Payment/Payment';
 import PopularPak from './Components/PopularPak/PopularPak';
 import User from './Components/User/User';
+import ForgotPassword from './Components/ForgotPass/ForgotPass';
 
 
 
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
       {
         path: 'user',
         element: <User/>
+      },
+      {
+        path: 'forgotpass',
+        element: <ForgotPassword/>
       },
       
     ]
