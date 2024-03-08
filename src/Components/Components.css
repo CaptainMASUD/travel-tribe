@@ -1572,8 +1572,8 @@ body {
   font-weight: 500;
 }
 @media (max-width: 762px) {
-  .usermain1 .card {
-    width:380px !important ;
+  .usermain1 .card tbody td{
+    font-size: 0.9rem;
   }
   .usermain1 .card button{
     width: 150px !important;
