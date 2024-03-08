@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import '../Components.css'
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -6,6 +9,7 @@ function ForgotPassword() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
   const [showResetForm, setShowResetForm] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -17,6 +21,10 @@ function ForgotPassword() {
 
   const handleConfirmPasswordChange = (e) => {
     setConfirmPassword(e.target.value);
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = () => {
@@ -35,32 +43,47 @@ function ForgotPassword() {
   };
 
   const handleResetPassword = () => {
-    // Here you can implement your password reset logic.
-    // For simplicity, let's just display a message.
-    setMessage('Password successfully reset.');
-    setShowResetForm(false);
-    // You may want to add logic here to update the password in local storage or send it to a server.
+    const storedUserData = localStorage.getItem('userData');
+    if (storedUserData) {
+      const userData = JSON.parse(storedUserData);
+      userData.password = newPassword;
+      localStorage.setItem('userData', JSON.stringify(userData));
+      setMessage('Password successfully reset.');
+      setShowResetForm(false);
+    } else {
+      setMessage('No user data found.');
+    }
   };
 
   return (
-    <div className="container mt-5 d-flex justify-content-center align-items-center">
-      <div className="card p-4 mb-5" style={{width:"600px" ,margin:"0 auto" ,marginBottom:"80px",marginTop:"40px"}}>
-        <h2 className="text-center mb-4">Forgot Password</h2>
+    <div className="container mt-5 frpass">
+      <div className="card p-4 mb-5" style={{ maxWidth: "600px", margin: "0 auto", marginBottom: "80px", marginTop: "40px" }}>
+        <h2 className="text-center mb-4"><i class="fa-solid fa-pen-to-square fa-beat-fade"></i> Forgot Password</h2>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Enter your email:</label>
-          <input type="email" className="form-control form-control-sm" id="email" value={email} onChange={handleEmailChange} />
+          <input type="email" className="form-control form-control-sm" id="email" value={email} onChange={handleEmailChange} style={{ width: "280px" }} />
         </div>
-        <button className="btn btn-primary btn-sm d-block mx-auto" onClick={handleSubmit}>Submit</button>
-        {message && <div className="mt-3 text-center">{message}</div>}
+        <button className="btn btn-primary btn-sm d-block mx-auto mb-3" onClick={handleSubmit}>Submit</button>
+        {message && <div className="text-center">{message}</div>}
         {showResetForm && (
           <div className="mt-3">
             <div className="mb-3">
               <label htmlFor="newPassword" className="form-label">New Password:</label>
-              <input type="password" className="form-control form-control-sm" id="newPassword" value={newPassword} onChange={handleNewPasswordChange} />
+              <div className="input-group">
+                <input type={showPassword ? "text" : "password"} className="form-control form-control-sm" id="newPassword" value={newPassword} onChange={handleNewPasswordChange} style={{ width: "200px" }} />
+                <button className="btn btn-outline-secondary" type="button" onClick={togglePasswordVisibility} style={{ height: "31px", width: "50px" }}>
+                  <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                </button>
+              </div>
             </div>
             <div className="mb-3">
               <label htmlFor="confirmPassword" className="form-label">Confirm Password:</label>
-              <input type="password" className="form-control form-control-sm" id="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} />
+              <div className="input-group">
+                <input type={showPassword ? "text" : "password"} className="form-control form-control-sm" id="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordChange} style={{ width: "200px" }} />
+                <button className="btn btn-outline-secondary" type="button" onClick={togglePasswordVisibility} style={{ height: "31px", width: "50px" }}>
+                  <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                </button>
+              </div>
             </div>
             <button className="btn btn-primary btn-sm d-block mx-auto" onClick={handleResetPassword}>Reset Password</button>
           </div>

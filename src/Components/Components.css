@@ -1605,7 +1605,11 @@ body {
     text-align: center;
   }
 }
-
+@media (max-width: 400px){
+  .usermain1 .card {
+    width: 300px !important;
+  }
+}
  /* user ends */
 
  /* loading animation starts */
@@ -1646,8 +1650,30 @@ body {
 @media only screen and (max-width: 768px) {
   .mines .icon-container{
     margin-left: 35%;
-    
-   
+      
 }
 }
  /* loading animation ends */
+
+ /* Forget Passwrod starts */
+ .frpass .card{
+  transform: scale(1) !important;
+  box-shadow: 4px 4px 10px rgb(174, 174, 174) !important;
+  background-color: #9797e6;
+ }
+ .frpass .card label{
+  color: white;
+  font-weight: 400 !important;
+ }
+ .frpass .card button{
+  background-color: #7743DB;
+  color: white;
+
+ }
+ .frpass .card input{
+  background-color: #d3dee0;
+ }
+ .frpass .card button:hover{
+  background-color: #39255f;
+ }
+ /* Forget Passwrod ends */
