@@ -13,11 +13,8 @@ function Login() {
     // Retrieve stored user data from local storage
     const storedUserData = JSON.parse(localStorage.getItem('userData'));
     if (storedUserData && username === storedUserData.username && password === storedUserData.password) {
-      // Successful login
-      // Redirect to /user page with user data
       navigate(`/user?username=${username}&name=${storedUserData.name}&address=${storedUserData.address}&number=${storedUserData.number}`);
     } else {
-      // Failed login
       setErrorMessage('Invalid username or password');
     }
   };
@@ -27,7 +24,7 @@ function Login() {
   };
 
   const handleForgotPassword = () => {
-    alert('Redirecting to forgot password page...');
+    navigate('/forgotpass');
   };
 
   return (
@@ -72,7 +69,7 @@ function Login() {
               </tr>
               <tr>
                 <td colSpan="2" style={{ textAlign: 'center', marginTop: '10px' }}>
-                  <span className="forgot-password-link" onClick={handleForgotPassword}>Forgot Password?</span>
+                  <span className="forgot-password-link forgotpass" style={{cursor:"pointer",}} onClick={handleForgotPassword}>Forgot Password?</span>
                 </td>
               </tr>
             </tbody>

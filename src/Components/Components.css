@@ -1002,8 +1002,14 @@ body {
 .regismain td{
   padding: 10px;
 }
-
-
+.logmain tbody .forgotpass{
+  transition: 0.5s;
+}
+.logmain tbody .forgotpass:hover{
+  color: #ebe856;
+  width: 200px !important;
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 752px) {
   .logmain .card{
