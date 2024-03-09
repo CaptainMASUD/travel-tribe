@@ -45,6 +45,11 @@ function ForgotPassword() {
   };
 
   const handleResetPassword = () => {
+    if (newPassword !== confirmPassword) {
+      setMessage('Passwords do not match.');
+      return;
+    }
+
     const storedUserData = localStorage.getItem('userData');
     if (storedUserData) {
       const userData = JSON.parse(storedUserData);
