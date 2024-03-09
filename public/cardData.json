@@ -8,79 +8,19 @@
   {
       "id": "2",
       "title": "Sajek",
-      "image": "sajeck.jpg",
+      "image": "sajek.jpg",
       "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   },
   {
       "id": "3",
       "title": "Bandarban",
-      "image": "ban.jpg",
+      "image": "Bandarban.jpg",
       "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   },
   {
       "id": "4",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "5",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "6",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "7",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "8",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "9",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "10",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "11",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "12",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "13",
-      "title": "Bandarban",
-      "image": "ban.jpg",
-      "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
-  },
-  {
-      "id": "14",
-      "title": "Bandarban",
-      "image": "ban.jpg",
+      "title": "SreeMangal",
+      "image": "SreeMangal.jpg",
       "text": "Some quick example text to build on the card title and make up the bulk of the card's content."
   }
 ]

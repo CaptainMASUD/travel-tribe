@@ -6,6 +6,11 @@ import "./Components.css";
 import cox from "./images/cox.png"; 
 import sajeck from "./images/sajeck.jpg";
 import ban from "./images/ban.jpg";
+import Saintmartin from './images/places/Saintmartin.jpg'
+import sajek from './images/places/sajek.jpg'
+import sylhet from './images/places/sylhet.jpg'
+import Bandarban from './images/places/Bandarban.jpg'
+import SreeMangal from './images/places/SreeMangal.jpg'
 
 function Homeservices() {
   const [cardData, setCardData] = useState([]);
@@ -37,7 +42,7 @@ function Homeservices() {
         <div className="row">
           {cardData.map((data, index) => (
             <div key={index} className="col-md-3 mb-4">
-              <Card style={{ width: "93%" }} className="card">
+              <Card style={{ width: "93%" ,marginBottom:"50px"}} className="card">
                 <Card.Img
                   variant="top"
                   src={getImagePath(data.image)} 
@@ -62,10 +67,12 @@ function getImagePath(image) {
   switch (image) {
     case 'cox.png':
       return cox;
-    case 'sajeck.jpg':
-      return sajeck;
-    case 'ban.jpg':
-      return ban;
+    case 'sajek.jpg':
+      return sajek;
+    case 'Bandarban.jpg':
+      return Bandarban;
+    case 'SreeMangal.jpg':
+      return SreeMangal;
     default:
       return ''; 
   }

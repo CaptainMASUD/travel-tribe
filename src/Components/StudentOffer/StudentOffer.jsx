@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal'; // Import Modal from react-bootstrap
 import cox from "../images/cox.png"; 
-import sajeck from "../images/sajeck.jpg";
 import ban from "../images/ban.jpg";
 import '../Components.css'
+import Saintmartin from '../images/places/Saintmartin.jpg'
+import sajek from '../images/places/sajek.jpg'
+import sylhet from '../images/places/sylhet.jpg'
+import Bandarban from '../images/places/Bandarban.jpg'
 
 function StudentOffer() {
   // Define offer data
@@ -33,7 +36,7 @@ function StudentOffer() {
       night: 4,
       price: 700,
       discount: 220, 
-      image: sajeck
+      image: sajek
     },
     {
       hotelName: "Hotel Bandarban",
@@ -46,11 +49,11 @@ function StudentOffer() {
       night: 2,
       price: 600,
       discount: 100,
-      image: ban
+      image: Bandarban
     },
     {
-      hotelName: "Hotel Bandarban",
-      placeName: "Bandarban",
+      hotelName: "Hotel Sylhet",
+      placeName: "Sylhet",
       roomQuantity: 3,
       bedType: "Single",
       bedQuantity: 1,
@@ -59,11 +62,11 @@ function StudentOffer() {
       night: 2,
       price: 600,
       discount: 100,
-      image: ban
+      image: sylhet
     },
     {
-      hotelName: "Hotel Bandarban",
-      placeName: "Bandarban",
+      hotelName: "Hotel Saintmartin",
+      placeName: "Saintmartin",
       roomQuantity: 3,
       bedType: "Single",
       bedQuantity: 1,
@@ -72,35 +75,8 @@ function StudentOffer() {
       night: 2,
       price: 600,
       discount: 100,
-      image: ban
+      image: Saintmartin
     },
-    {
-      hotelName: "Hotel Bandarban",
-      placeName: "Bandarban",
-      roomQuantity: 3,
-      bedType: "Single",
-      bedQuantity: 1,
-      mealQuantity: 2,
-      day: 1,
-      night: 2,
-      price: 600,
-      discount: 100,
-      image: ban
-    },
-    {
-      hotelName: "Hotel Bandarban",
-      placeName: "Bandarban",
-      roomQuantity: 3,
-      bedType: "Single",
-      bedQuantity: 1,
-      mealQuantity: 2,
-      day: 1,
-      night: 2,
-      price: 600,
-      discount: 100,
-      image: ban
-    },
-    // More offer data...
   ];
 
   // Coupon codes
@@ -191,7 +167,7 @@ function StudentOffer() {
     return offers.map((offer, index) => (
       <div key={index} className="col-md-3 col-sm-6 mb-5 scardmain"> 
         <div className="card" style={{ width: "90%" }}> 
-          <img src={offer.image} className="card-img-top" alt={offer.placeName} />
+          <img src={offer.image} style={{height:"200px"}} className="card-img-top" alt={offer.placeName} />
           <div className="card-body">
             <h5 className="card-title">{offer.hotelName}</h5>
             <p className="card-text">{offer.placeName}</p>
@@ -258,36 +234,48 @@ function StudentOffer() {
       {/* Custom Packages button */}
       <div className="row mb-2">
         <div className="col-md-12">
-          <button style={{backgroundColor:"#5F5D9C"}} className="btn btn-secondary" type="button" onClick={navigateToCustomPackages}>Custom Packages</button>
+          <button style={{ backgroundColor: "#5F5D9C" }} className="btn btn-secondary" type="button" onClick={navigateToCustomPackages}>Custom Packages</button>
         </div>
       </div>
       {/* Modals */}
       {/* Correct coupon modal */}
-      <Modal show={showCorrectCouponModal} onHide={() => closeModal('correct')}>
+      <Modal
+        show={showCorrectCouponModal}
+        onHide={() => closeModal('correct')}
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>Correct Coupon</Modal.Title>
         </Modal.Header>
-        <Modal.Body  style={{color:'green'}} >
+        <Modal.Body style={{ color: 'green' }}>
           Your coupon is correct.
         </Modal.Body>
         <Modal.Footer>
-          <button  style={{backgroundColor:'#6967c3'}}  className="btn btn-secondary" onClick={() => closeModal('correct')}>Close</button>
+          <button style={{ backgroundColor: '#6967c3' }} className="btn btn-secondary" onClick={() => closeModal('correct')}>Close</button>
         </Modal.Footer>
       </Modal>
       {/* Invalid coupon modal */}
-      <Modal show={showInvalidCouponModal} onHide={() => closeModal('invalid')}>
+      <Modal
+        show={showInvalidCouponModal}
+        onHide={() => closeModal('invalid')}
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>Invalid Coupon</Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{color:'red'}}>
+        <Modal.Body style={{ color: 'red' }}>
           The coupon code is not correct.
         </Modal.Body>
         <Modal.Footer>
-          <button  style={{backgroundColor:'#6967c3'}}  className="btn btn-secondary" onClick={() => closeModal('invalid')}>Close</button>
+          <button style={{ backgroundColor: '#6967c3' }} className="btn btn-secondary" onClick={() => closeModal('invalid')}>Close</button>
         </Modal.Footer>
       </Modal>
       {/* Empty coupon modal */}
-      <Modal show={showEmptyCouponModal} onHide={() => closeModal('empty')}>
+      <Modal
+        show={showEmptyCouponModal}
+        onHide={() => closeModal('empty')}
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>Empty Coupon</Modal.Title>
         </Modal.Header>
@@ -295,7 +283,7 @@ function StudentOffer() {
           Please enter a coupon code.
         </Modal.Body>
         <Modal.Footer>
-          <button style={{backgroundColor:'#6967c3'}} className="btn btn-secondary" onClick={() => closeModal('empty')}>Close</button>
+          <button style={{ backgroundColor: '#6967c3' }} className="btn btn-secondary" onClick={() => closeModal('empty')}>Close</button>
         </Modal.Footer>
       </Modal>
       {/* Cards */}
@@ -304,7 +292,6 @@ function StudentOffer() {
       </div>
     </div>
   );
-  
 }
 
 export default StudentOffer;

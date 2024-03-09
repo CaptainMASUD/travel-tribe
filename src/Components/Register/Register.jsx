@@ -69,7 +69,7 @@ function Register() {
                   <label>Name:</label>
                 </td>
                 <td>
-                  <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+                  <input placeholder='name' type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -77,7 +77,7 @@ function Register() {
                   <label>Email:</label>
                 </td>
                 <td>
-                  <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <input placeholder='email' type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -85,7 +85,7 @@ function Register() {
                   <label>Address:</label>
                 </td>
                 <td>
-                  <input type="text" className="form-control" value={address} onChange={(e) => setAddress(e.target.value)} />
+                  <input placeholder='address' type="text" className="form-control" value={address} onChange={(e) => setAddress(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -93,7 +93,7 @@ function Register() {
                   <label>Birthdate:</label>
                 </td>
                 <td>
-                  <input type="date" className="form-control" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
+                  <input  type="date" className="form-control" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -101,7 +101,7 @@ function Register() {
                   <label>Phone Number:</label>
                 </td>
                 <td>
-                  <input type="text" className="form-control" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                  <input placeholder='phone number' type="text" className="form-control" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -109,7 +109,7 @@ function Register() {
                   <label>Username:</label>
                 </td>
                 <td>
-                  <input type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
+                  <input placeholder='username' type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -117,7 +117,7 @@ function Register() {
                   <label>Password:</label>
                 </td>
                 <td>
-                  <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
+                  <input placeholder='password' type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -125,7 +125,7 @@ function Register() {
                   <label>Confirm Password:</label>
                 </td>
                 <td>
-                  <input type="password" className="form-control" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                  <input placeholder='Confirm Password' type="password" className="form-control" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 </td>
               </tr>
               <tr>

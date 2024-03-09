@@ -196,7 +196,7 @@ function Payment() {
               <p>
                 <strong>Date:</strong> {new Date().toLocaleDateString()}
               </p>
-              <button
+              <button 
                 className="btn btn-success btn2"
                 onClick={handleProceedAndContinue}
               >

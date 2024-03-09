@@ -13,6 +13,10 @@ function Login() {
     // Retrieve stored user data from local storage
     const storedUserData = JSON.parse(localStorage.getItem('userData'));
     if (storedUserData && username === storedUserData.username && password === storedUserData.password) {
+      // Set username and password in browser cookies
+      document.cookie = `username=${username};`;
+      document.cookie = `password=${password};`;
+      
       navigate(`/user?username=${username}&name=${storedUserData.name}&address=${storedUserData.address}&number=${storedUserData.number}`);
     } else {
       setErrorMessage('Invalid username or password');

@@ -382,6 +382,7 @@ body {
   align-items: center;
   min-height: 50vh;
 }
+
 .wrapper{
   width: 90%;
 }
@@ -1508,15 +1509,17 @@ body {
 }
 .pmain button{
 
-  background-color: brown;
+  background-color: #7743DB;
+
   border: brown;
+  border-radius: 3px !important;
   transition: 0.5s;
 
 }
 .pmain .btn1{
   margin-top: 20px;
   margin-bottom: 50px !important;
-  background-color: brown;
+  background-color: #7743DB;
   border: brown;
   transition: 0.5s;
   width: 150px;
@@ -1528,7 +1531,7 @@ body {
 }
 .pmain button:hover{
 
-  background-color: brown;
+  background-color: #5521b6;
   border: brown;
   
 }
@@ -1683,3 +1686,4 @@ body {
   background-color: #39255f;
  }
  /* Forget Passwrod ends */
+
