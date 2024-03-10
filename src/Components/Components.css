@@ -1450,6 +1450,33 @@ body {
 .pmain .card{
   margin: 0 auto !important;
   margin-bottom: 30px !important;
+  box-shadow: 4px 4px 10px rgb(184, 184, 184) !important;
+}
+.pmain .cdm:hover{
+  transform: scale(1) !important;
+}
+
+.pmain .cdm button{
+  margin-top: 20px;
+}
+.pmain .cdm p{
+  color: #70509a;
+}
+.pmain .cdm h2{
+  color: #39255f;
+}
+.pmain .cdm label{
+  color: #8d6247;
+}
+.pmain .cdm input{
+  border: 1px solid #170b21;
+  background-color: #f0f0ff;
+  text-align: center !important;
+}
+.pmain .cdm input:focus{
+  outline: none !important;
+  box-shadow: none !important;
+ 
 }
  /* payment ends */
   

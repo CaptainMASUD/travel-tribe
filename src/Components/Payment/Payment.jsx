@@ -22,18 +22,18 @@ function Payment() {
   const [nameError, setNameError] = useState("");
   const [phoneNumberError, setPhoneNumberError] = useState("");
   const [showReceipt, setShowReceipt] = useState(false);
+  const [verificationCode, setVerificationCode] = useState("");
+  const [showVerificationModal, setShowVerificationModal] = useState(false);
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
 
-  // Function to handle payment method selection
   const handlePaymentMethodChange = (e) => {
     setPaymentMethod(e.target.value);
   };
 
-  // Function to handle bank selection
   const handleBankSelection = (e) => {
     setSelectedBank(e.target.value);
   };
 
-  // Function to handle name input change
   const handleNameChange = (e) => {
     setName(e.target.value);
     if (!e.target.value) {
@@ -43,7 +43,6 @@ function Payment() {
     }
   };
 
-  // Function to handle phone number input change
   const handlePhoneNumberChange = (e) => {
     const value = e.target.value;
     if (/^\d*$/.test(value)) {
@@ -58,7 +57,6 @@ function Payment() {
     }
   };
 
-  // Function to handle form submission
   const handleSubmit = () => {
     if (
       !paymentMethod ||
@@ -72,14 +70,24 @@ function Payment() {
     } else {
       setShowAlert(false);
       setShowReceipt(true);
-      // Implement your payment logic here
     }
   };
 
-  // Function to handle Proceed and Continue button click
   const handleProceedAndContinue = () => {
-    // Add your logic here to proceed and continue
-    console.log("Proceed and Continue");
+    setShowVerificationModal(true);
+    // Add logic to send verification code to the user's email here
+  };
+
+  const handleVerificationCodeChange = (e) => {
+    setVerificationCode(e.target.value);
+  };
+
+  const handleVerifyPayment = () => {
+    // Add logic to verify the verification code
+    // For demonstration purpose, assume the verification code is '123456'
+    if (verificationCode === '123456') {
+      setPaymentSuccess(true);
+    }
   };
 
   return (
@@ -260,6 +268,36 @@ function Payment() {
               >
                 Proceed and Continue
               </button>
+            </div>
+          )}
+          {showVerificationModal && !paymentSuccess && (
+            <div className="card cdm p-3 mt-3">
+              <h2><i class="fa-solid fa-shield fa-bounce"></i> Get Verified Now</h2>
+              <div className="form-group">
+                <p>Check your email for after Payment and put the code to the box and get verified.</p>
+                <label htmlFor="verificationCode">Verification Code:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="verificationCode"
+                  value={verificationCode}
+                  onChange={handleVerificationCodeChange}
+                  placeholder="Enter verification code"
+                />
+              </div>
+              <button
+                className="btn btn-primary vbtn"
+                style={{ width: "130px", color: "white" }}
+                onClick={handleVerifyPayment}
+              >
+                Verify Payment
+              </button>
+            </div>
+          )}
+          {paymentSuccess && (
+            <div className="card cdm p-3 mt-3">
+              <h2>Payment Secured</h2>
+              <p>Your payment has been successfully verified.</p>
             </div>
           )}
         </div>
