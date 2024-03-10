@@ -32,7 +32,7 @@ function Footer() {
               <form action="#">
                 <input type="email" name="email" className="text-input contact-input" placeholder="Your email address" />
                 <textarea name="message" className="text-input contact-input" placeholder="Your message"></textarea>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary" style={{width:"120px",height:"32px",padding:"0px",borderRadius:"3px",}}>
                   Send
                 </button>
               </form>

@@ -22,7 +22,7 @@ import { useNavigate } from "react-router-dom";
 function AboutUs() {
   const navigate = useNavigate();
   const [headerText, setHeaderText] = useState("");
-  const headerContent = " Lets have a reliable journey with trabel tirbe ";
+  const headerContent = "Lets have a reliable journey with trabel tirbe ";
   useEffect(() => {
     const animateText = () => {
       let index = 0;
@@ -37,12 +37,12 @@ function AboutUs() {
           clearInterval(timer);
           timeout = setTimeout(() => {
             direction *= -1;
-            timer = setInterval(type, 100);
+            timer = setInterval(type, 90);
           }, 1000);
         }
       };
 
-      let timer = setInterval(type, 100);
+      let timer = setInterval(type, 90);
 
       return () => {
         clearInterval(timer);
@@ -57,8 +57,9 @@ function AboutUs() {
     window.scrollTo(0, 0);
     navigate("/");
   };
+
   return (
-    <div className="about-us">
+    <div className="about-us text-center">
       <section className="overview">
         <Container>
           <h1>About Travel Tribe</h1>
@@ -77,12 +78,13 @@ function AboutUs() {
       <section className="services">
         <Container>
           <h2>Our Services</h2>
-          <Row>
-            <Col md={4}>
+          <Row className="justify-content-center">
+            <Col md={6} lg={4}>
               <Card className="service-card c1">
                 <Card.Body>
-                  <Card.Title className="title">Curated Tours</Card.Title>
-                  <img src={travel} alt="" />{" "}
+                  <Card.Title className="title"> Curated Tours</Card.Title>
+
+                  <img src={travel} alt="" />
                   <i className="fa-solid fa-arrows-turn-to-dots"></i>
                   <Card.Text>
                     Explore our meticulously planned tours to the world's most
@@ -91,13 +93,14 @@ function AboutUs() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={6} lg={4}>
               <Card className="service-card c2">
                 <Card.Body>
                   <Card.Title className="title">
                     Luxury Accommodations
                   </Card.Title>
-                  <img src={hotel} alt="" /> <i className="fa-solid fa-star"></i>
+                  <img src={hotel} alt="" />{" "}
+                  <i className="fa-solid fa-star"></i>
                   <i className="fa-solid fa-star"></i>
                   <i className="fa-solid fa-star"></i>
                   <i className="fa-solid fa-star"></i>
@@ -109,10 +112,12 @@ function AboutUs() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={6} lg={4}>
               <Card className="service-card c3">
                 <Card.Body>
-                  <Card.Title>Personalized Services</Card.Title>
+                  <Card.Title className="title">
+                    Personalized Services
+                  </Card.Title>
                   <img src={sketch} alt="" />{" "}
                   <i className="fa-regular fa-pen-to-square"></i>
                   <Card.Text>
@@ -129,11 +134,11 @@ function AboutUs() {
       <section className="team">
         <Container>
           <h2>Meet Our Team</h2>
-          <Row>
+          <Row className="justify-content-center">
             <Col md={4}>
               <div className="team-member">
                 <img
-                  className="rounded-circle bordered-image i1" // Add bordered-image class
+                  className="rounded-circle bordered-image i1"
                   style={{ width: "120px", height: "120px" }}
                   src={ceo}
                   alt="CEO image"
@@ -142,7 +147,6 @@ function AboutUs() {
                 <p>CEO & Founder</p>
               </div>
             </Col>
-
             <Col md={4}>
               <div className="team-member">
                 <img
@@ -174,7 +178,7 @@ function AboutUs() {
       <section className="testimonials">
         <Container>
           <h2>What Our Customers Say</h2>
-          <Row>
+          <Row className="justify-content-center">
             <Col md={6}>
               <div className="testimonial">
                 <p>
@@ -184,7 +188,6 @@ function AboutUs() {
                 </p>
               </div>
             </Col>
-            {/* Add more testimonials */}
           </Row>
         </Container>
       </section>
@@ -192,18 +195,19 @@ function AboutUs() {
       <section className="collaborations">
         <Container>
           <h2>Our Collaborations</h2>
-          <Row>
-            <Col md={3}>
+          <Row className="justify-content-center">
+            <Col md={6} lg={4}>
               <div className="collaboration">
-                <img src={evento} alt="Evento Logo" /> <span>Evento</span>{" "}
-                <span className="x">X</span> <span className="tr">Tribe</span>
+                <img src={evento} alt="Evento Logo" />
+                <span>Evento</span> <span className="x">X</span>{" "}
+                <span className="tr">Tribe</span>
                 <p>Exclusive partnership with luxury hotel chains</p>
               </div>
             </Col>
           </Row>
           <h2>Evento</h2>
-          <Row>
-            <Col md={4}>
+          <Row className="justify-content-center">
+            <Col md={6} lg={4}>
               <Card className="service-card c4">
                 <Card.Body>
                   <Card.Title className="title">Event Planning</Card.Title>
@@ -215,7 +219,7 @@ function AboutUs() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={6} lg={4}>
               <Card className="service-card c5">
                 <Card.Body>
                   <Card.Title className="title">Design Services</Card.Title>
@@ -228,7 +232,7 @@ function AboutUs() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={6} lg={4}>
               <Card className="service-card c6">
                 <Card.Body>
                   <Card.Title className="title">Catering</Card.Title>

@@ -50,7 +50,7 @@ function Register() {
     <div className="container register-container regismain">
       <div className="row justify-content-center">
         <div className="col-md-10">
-          <table className="register-table" style={{ width: '90%', maxWidth: '800px', margin: '50px auto', background: '#6967c3',color:"white" }}>
+          <table className="register-table" style={{ borderRadius:"8px",width: '90%', maxWidth: '800px', margin: '50px auto', background: '#6967c3',color:"white" }}>
             <tbody>
               <tr>
                 <td colSpan="2">

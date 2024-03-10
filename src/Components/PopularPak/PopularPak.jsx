@@ -38,8 +38,8 @@ function PopularPak() {
       <div className="row justify-content-center mt-4">
         <div className="col-md-6">
           <div className="table-responsive">
-            <table className="table custom-table">
-              <tbody>
+            <table className="table custom-table" style={{borderRadius:"5px"}}>
+              <tbody >
                 <tr>
                   <td>Hotel Name:</td>
                   <td>

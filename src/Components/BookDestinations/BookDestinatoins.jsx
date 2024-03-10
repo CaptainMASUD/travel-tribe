@@ -36,6 +36,25 @@ function BookDestinations() {
             rent: 1200,
             image: banImage
         },
+        {
+            placeName: "Bandarban",
+            details: "Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Hill Tracts. Bandarban , or in Marma or Arakanese language as 'Rwa-daw Mro' is also known as Arvumi or the Bohmong Circle (of the rest of the three hill districts Rangamati is the Chakma Circle, khagrachhari is the Mong Circle).",
+            rent: 1200,
+            image: banImage
+        },
+        {
+            placeName: "Bandarban",
+            details: "Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Hill Tracts. Bandarban , or in Marma or Arakanese language as 'Rwa-daw Mro' is also known as Arvumi or the Bohmong Circle (of the rest of the three hill districts Rangamati is the Chakma Circle, khagrachhari is the Mong Circle).",
+            rent: 1200,
+            image: banImage
+        },
+        {
+            placeName: "Bandarban",
+            details: "Bandarban is a district in South-Eastern Bangladesh, and a part of the Chittagong Hill Tracts. Bandarban , or in Marma or Arakanese language as 'Rwa-daw Mro' is also known as Arvumi or the Bohmong Circle (of the rest of the three hill districts Rangamati is the Chakma Circle, khagrachhari is the Mong Circle).",
+            rent: 1200,
+            image: banImage
+        },
+      
     ];
 
     const truncateText = (text, maxLength) => {
@@ -48,16 +67,14 @@ function BookDestinations() {
 
     const generateCards = () => {
         return destinations.map((destination, index) => (
-            <div key={index} className="col-lg-3 col-md-3 col-sm-6 mb-4 fade-in bdscard"> 
-                <div className="card" style={{ width: '300px' }}>
-                    <img src={destination.image} className="card-img-top" alt={destination.placeName} style={{ width: '300px', height: 'auto' }} />
+            <div key={index} className="col-lg-4 col-md-6 mb-4 mt-5 mb-5 bdmain">
+                <div className="card">
+                    <img src={destination.image} className="card-img-top" alt={destination.placeName} />
                     <div className="card-body">
                         <h5 className="card-title">{destination.placeName}</h5>
-                        <p className="card-text">
-                            {truncateText(destination.details, 39)}
-                        </p>
+                        <p className="card-text">{truncateText(destination.details, 39)}</p>
                         <p className="card-text">Rent per Day: <span style={{ color: '#d17d31' }}>{destination.rent} BDT</span></p>
-                        <button  onClick={() => handlenavigate(destination.rent)} className="btn btn-primary">Get Now</button>
+                        <button onClick={() => handlenavigate(destination.rent)} className="btn btn-primary">Get Now</button>
                     </div>
                 </div>
             </div>
@@ -65,9 +82,9 @@ function BookDestinations() {
     };
 
     return (
-        <div className="mt-4 bdh2">
+        <div className="container mt-4">
             <h2 className="text-center">Book Destinations</h2>
-            <div className="row justify-content-center bdscard2">
+            <div className="row justify-content-between">
                 {generateCards()}
             </div>
         </div>

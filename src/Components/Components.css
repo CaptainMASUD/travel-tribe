@@ -391,12 +391,13 @@ body {
   float: left;
   margin-right: 50px;
   border-radius: 10px;
-  box-shadow: 4px  4px 10px rgb(229, 175, 75);
+  box-shadow: 4px  4px 10px rgb(187, 187, 187);
   transition: 0.6s;
   cursor: pointer;
 }
 .wrmain img:hover{
-  transform: scale(1.05);
+  transform: scale(1.04);
+  box-shadow: none;
 }
 
 .wrbody2 {
@@ -415,7 +416,7 @@ body {
 .wrapper2 img {
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: -4px  4px 10px rgb(117, 117, 194);
+  box-shadow: -4px  4px 10px rgb(187, 187, 187);
   transition: 0.6s;
   cursor: pointer;
 }
@@ -808,6 +809,10 @@ body {
 /* Studentoffer ends */
 
 /* custom packages starts */
+.form-control{
+  border-radius: 3px !important;
+}
+
 .cpmain .cusbtn2{
   margin-left: 20px !important;
 }
@@ -1011,7 +1016,10 @@ body {
   width: 200px !important;
   text-decoration: underline;
 }
-
+.logmain input{
+  border-radius: 3px !important;
+  height: 30px !important;
+}
 @media screen and (max-width: 752px) {
   .logmain .card{
    width: 500px !important;
@@ -1030,7 +1038,10 @@ body {
   }
 }
 
-
+.regismain input{
+  border-radius: 3px !important;
+  height: 30px !important;
+}
 @media screen and (max-width: 782px){
   .logmain .card{
     width: 600px !important;
@@ -1219,6 +1230,11 @@ body {
     left: 100%;
   }
 }
+@media screen and  (max-width: 500px){
+  .about-us .overview h3{
+    font-size: 1.2rem !important;
+  }
+}
 @media screen and  (max-width: 1200px) {
 
   .services .service-card {
@@ -1362,133 +1378,8 @@ body {
   /* other serives ends */
 
 /* Book destinaiotns starts */
-.bdscard{
-  margin-bottom: 20px;
-  margin-left: -20px;
-}
-.bdscard .card{
-  margin-top: 50px;
-  /* width: 400px; */
-  margin: 0 auto;
-    margin-left: 10px;
-    margin-top: 30px;
-    align-items: center !important;
-    text-align: center;
-    overflow: hidden;
-    box-shadow: 4px 4px 10px  gray !important;
-    transition: 0.5s;
-  
-}
-.bdscard .card:hover{
-  transform: scale(1.04) !important;
-}
-.bdscard .card button{
-  border: none !important;
-  border: 1px solid #7743DB !important;
-  color: #7371d7;
-}
-.bdscard .card button:hover{
-  background-color: #7743DB;
-  color: white;
-}
-.bdscard2 {
-  margin-left: 120px !important;
-}
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card {
-  animation: fade-in 0.5s ease-in-out;
-}
-@media screen and (max-width: 752px) {
-  .bdscard2 {
-    display: flex;
-    flex-direction: column;
-
-    margin-left: 130px !important;
-  }
-  .bdscard .card{
-    margin-left: 20px !important;
-    margin: 0 auto !important;
-    width: 300px !important;
-  }
-}
-
-@media screen and (min-width: 752px) and (max-width: 1200px) {
-  .bdscard2 {
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    
-  }
-  .bdscard2 .col-3 {
-    flex: 0 0 50%; /* Two cards per row */
-    max-width: 50%;
-  }
-  .bdscard .card{
-    width: 400px !important;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .bdscard2 {
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-  }
-  .bdscard2 .col-3 {
-    flex: 0 0 25%; /* Four cards per row */
-    max-width: 25%;
-  }
-}
-@media screen and (min-width: 752px) and (max-width: 1100px){
-  .bdscard2 {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;  */
-    margin-left: 80px !important;
-  }
-  .bdscard .card{
-    width: 400px !important;
-    margin-left: 180px;
-  }
-}
-@media screen and (min-width: 1200px) and (max-width: 2000px) {
-  .bdscard2 {
-    display: flex;
-    justify-content: center; /* Center cards horizontally */
-    flex-wrap: wrap; /* Wrap cards to a new row */
-  }
-  .bdscard2 .col-3 {
-    flex: 0 0 33.33%; /* Three cards per row */
-    max-width: 33.33%;
-  }
-}
-@media screen and (max-width: 752px){
- 
-  .bdh2 h2{
-   text-align: center;
-  }
-  .bdscard2 {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;  */
-    margin-left: 40px !important;
-  }
-  .bdscard .card{
-    width: 300px !important;
-    margin-top: 30px !important;
-    margin-bottom: 20px;
-    /* margin-left: 180px; */
-  }
+.bdmain .card:hover{
+  transform: scale(1.035) !important;
 }
   /* Book destinaiotns ends */
 
@@ -1537,7 +1428,25 @@ body {
 }
 .pmain .receipt{
   margin-top: -10px;
+  text-align: left;
+  box-shadow: 4px 4px 10px rgb(173, 173, 173) !important;
 }
+.pmain .receipt strong{
+  font-weight: 450;
+  color: #3344a5;
+  
+}
+.pmain .receipt h2{
+  margin-bottom: 20px;
+  color: #31255f;
+}
+.pmain .receipt input {
+  
+}
+.pmain .receipt:hover{
+  transform: scale(1);
+}
+
 .pmain .card{
   margin: 0 auto !important;
   margin-bottom: 30px !important;

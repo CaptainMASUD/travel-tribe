@@ -171,33 +171,91 @@ function Payment() {
             Submit
           </button>
           {showReceipt && (
-            <div className="receipt">
-              <h2>Payment Receipt</h2>
-              <p>
-                <strong>Product:</strong> Destination Booking
-              </p>
-              <p>
-                <strong>Amount:</strong> {rent} BDT
-              </p>
-              <p>
-                <strong>User:</strong> {name}
-              </p>
-              <p>
-                <strong>Phone Number:</strong> {phoneNumber}
-              </p>
-              <p>
-                <strong>Payment Method:</strong> {paymentMethod}
-              </p>
-              {selectedBank && (
-                <p>
-                  <strong>Bank:</strong> {selectedBank}
-                </p>
-              )}
-              <p>
-                <strong>Date:</strong> {new Date().toLocaleDateString()}
-              </p>
-              <button 
-                className="btn btn-success btn2"
+            <div className="receipt card p-3">
+              <h2 className="receipt-heading">Payment Receipt</h2>
+              <div className="receipt-info">
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <strong>Product:</strong>
+                  </div>
+                  <div className="col-6">Destination Booking</div>
+                </div>
+
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <strong>Amount:</strong>
+                  </div>
+                  <div className="col-6">{rent} BDT</div>
+                </div>
+
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <strong>User:</strong>
+                  </div>
+                  <div className="col-6">
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={name}
+                      readOnly
+                    />
+                  </div>
+                </div>
+
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <strong>Phone Number:</strong>
+                  </div>
+                  <div className="col-6">
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={phoneNumber}
+                      readOnly
+                    />
+                  </div>
+                </div>
+
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <strong>Payment Method:</strong>
+                  </div>
+                  <div className="col-6">
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={paymentMethod}
+                      readOnly
+                    />
+                  </div>
+                </div>
+
+                {selectedBank && (
+                  <div className="row mb-2">
+                    <div className="col-6">
+                      <strong>Bank:</strong>
+                    </div>
+                    <div className="col-6">
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={selectedBank}
+                        readOnly
+                      />
+                    </div>
+                  </div>
+                )}
+
+                <div className="row mb-2">
+                  <div className="col-6">
+                    <strong>Date:</strong>
+                  </div>
+                  <div className="col-6">{new Date().toLocaleDateString()}</div>
+                </div>
+              </div>
+              <button
+                style={{ width: "200px", color: "white" }}
+                className="btn btn-success btn-block mt-3"
                 onClick={handleProceedAndContinue}
               >
                 Proceed and Continue
