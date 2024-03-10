@@ -38,7 +38,7 @@ function HomeColab() {
               </ul>
             </div>
             <Button variant="primary btn1" style={{ backgroundColor: '#d0a769', borderColor: '#d0a769', marginRight: '10px' }}>Learn More</Button>
-            <Button variant="primary btn2" style={{ backgroundColor: '#d0a769', borderColor: '#d0a769' }}>Visit Evento</Button>
+            <Button variant="primary btn2" style={{ backgroundColor: '#d0a769', borderColor: '#d0a769',marginRight: '10px' }}>Visit Evento</Button>
           </div>
         </div>
       </div>
