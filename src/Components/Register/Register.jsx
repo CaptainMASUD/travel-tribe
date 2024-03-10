@@ -14,10 +14,35 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [showPhoneModal, setShowPhoneModal] = useState(false);
   const navigate = useNavigate();
 
   const handleRegister = () => {
-    if (!name || !email || !address || !birthdate || !phoneNumber || !username || !password || !confirmPassword) {
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setShowEmailModal(true);
+      return;
+    }
+
+    // Phone number validation
+    const phoneNumberPattern = /^\d+$/;
+    if (!phoneNumberPattern.test(phoneNumber)) {
+      setShowPhoneModal(true);
+      return;
+    }
+
+    if (
+      !name ||
+      !email ||
+      !address ||
+      !birthdate ||
+      !phoneNumber ||
+      !username ||
+      !password ||
+      !confirmPassword
+    ) {
       setShowModal(true);
       return;
     }
@@ -31,15 +56,30 @@ function Register() {
         birthdate,
         phoneNumber,
         username,
-        password
+        password,
       };
       localStorage.setItem('userData', JSON.stringify(userData));
       alert('Registration successful!');
+      resetFields();
     }
+  };
+
+  const resetFields = () => {
+    setName('');
+    setEmail('');
+    setAddress('');
+    setBirthdate('');
+    setPhoneNumber('');
+    setUsername('');
+    setPassword('');
+    setConfirmPassword('');
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setShowEmailModal(false);
+    setShowPhoneModal(false);
+    setErrorMessage('');
   };
 
   const handleLoginClick = () => {
@@ -50,14 +90,14 @@ function Register() {
     <div className="container register-container regismain">
       <div className="row justify-content-center">
         <div className="col-md-10">
-          <table className="register-table" style={{ borderRadius:"8px",width: '90%', maxWidth: '800px', margin: '50px auto', background: '#6967c3',color:"white" }}>
+          <table className="register-table" style={{ borderRadius: "8px", width: '90%', maxWidth: '800px', margin: '50px auto', background: '#6967c3', color: "white" }}>
             <tbody>
               <tr>
                 <td colSpan="2">
                   <h2 className="card-title" style={{ textAlign: 'center' }}>Register<i class="fa-solid fa-user-gear"></i></h2>
                 </td>
               </tr>
-              {errorMessage && 
+              {errorMessage &&
                 <tr>
                   <td colSpan="2">
                     <p style={{ color: 'red', marginTop: '10px', textAlign: 'center' }}>{errorMessage}</p>
@@ -93,7 +133,7 @@ function Register() {
                   <label>Birthdate:</label>
                 </td>
                 <td>
-                  <input  type="date" className="form-control" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
+                  <input type="date" className="form-control" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
                 </td>
               </tr>
               <tr>
@@ -147,6 +187,32 @@ function Register() {
           <Modal.Title>Error</Modal.Title>
         </Modal.Header>
         <Modal.Body>Please fill out all fields.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* Modal for invalid email format */}
+      <Modal show={showEmailModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Error</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Please enter a valid email address.(tribe@gmail.com)</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* Modal for invalid phone number format */}
+      <Modal show={showPhoneModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Error</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Please enter a valid phone number (numbers only).</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
             Close

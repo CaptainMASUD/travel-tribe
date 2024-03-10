@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../Components.css';
 
 function Footer() {
+  const location = useLocation();
+
+  const handleprofileclick =()=>{
+    window.open("https://github.com/CaptainMASUD")
+  }
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+    };
+    
+    scrollToTop();
+
+    return () => {
+      // Clean up the effect to avoid memory leaks
+    };
+  }, [location.pathname]); // Trigger the effect on route changes
+
   return (
     <footer className="footer">
       <div className="container">
@@ -18,11 +36,10 @@ function Footer() {
             <div className="footer-section links">
               <h2>Quick Links</h2>
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/aboutus">About Us</Link></li>
+                <li><Link to="/populardestinations">Destinations</Link></li>
+                <li><Link to="/otherservices">Services</Link></li>
               </ul>
             </div>
           </div>
@@ -32,7 +49,7 @@ function Footer() {
               <form action="#">
                 <input type="email" name="email" className="text-input contact-input" placeholder="Your email address" />
                 <textarea name="message" className="text-input contact-input" placeholder="Your message"></textarea>
-                <button type="submit" className="btn btn-primary" style={{width:"120px",height:"32px",padding:"0px",borderRadius:"3px",}}>
+                <button type="submit" className="btn btn-primary" style={{ width: "120px", height: "32px", padding: "0px", borderRadius: "3px", }}>
                   Send
                 </button>
               </form>
@@ -42,7 +59,7 @@ function Footer() {
         <div className="row">
           <div className="col">
             <div className="footer-bottom">
-              &copy; 2024 Travel Tribe | Designed by Alpha
+              &copy; 2024 Travel Tribe | Designed by <span  style={{color:"#aaa",textDecoration:"none",cursor:"pointer"}} onClick={handleprofileclick}>Masudul ALam</span>
             </div>
           </div>
         </div>
