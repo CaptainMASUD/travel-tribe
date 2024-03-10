@@ -102,7 +102,8 @@ function Login() {
                     className="btn btn-primary btn1"
                     onClick={handleLogin}
                     style={{
-                      marginLeft: "40px",
+                      marginLeft: "60px",
+                      marginBottom:"20px",
                       width: "100px",
                       height: "30px",
                       padding: "0px",
@@ -117,7 +118,8 @@ function Login() {
                     className="btn btn-secondary btn2"
                     onClick={handleRegister}
                     style={{
-                      marginLeft: "40px",
+                      marginLeft: "60px",
+                      marginBottom:"20px",
                       width: "100px",
                       height: "30px",
                       padding: "0px",
