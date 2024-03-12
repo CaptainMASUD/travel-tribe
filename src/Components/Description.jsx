@@ -21,7 +21,7 @@ function Description() {
           <h1 className="section-heading">
             About <span className="highlight">Travel Tribe</span>
           </h1>
-          <div className="section-content" style={{ textAlign: 'center' }}>
+          <div className="section-content" style={{ textAlign: 'justify' }}>
   <p>
     Travel Tribe is the premier travel and tourism company, committed
     to providing unparalleled experiences for travelers worldwide.
@@ -63,7 +63,7 @@ function Description() {
         </div>
         <div className="section student-section">
           <h1 className="student-heading">Special Packages for Students</h1>
-          <div className="section-content" style={{ textAlign: 'center' }}>
+          <div className="section-content" style={{ textAlign: 'justify' }}>
             <p>
               At <span className="important">Travel Tribe</span>, we understand
               the importance of exploration and discovery for students. That's
