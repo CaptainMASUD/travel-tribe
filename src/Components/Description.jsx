@@ -44,7 +44,7 @@ function Description() {
           </div>
           <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
             <i class="fa-solid fa-star fa-2x"></i>
-            <h2> Popular Packages</h2>
+            <h2> Popular Tour Packages</h2>
           </div>
           <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
             <i class="fa-solid fa-car  fa-2x"></i>
