@@ -21,63 +21,50 @@ function Description() {
           <h1 className="section-heading">
             About <span className="highlight">Travel Tribe</span>
           </h1>
-          <div className="section-content" style={{ textAlign: 'justify' }}>
-  <p>
-    Travel Tribe is the premier travel and tourism company, committed
-    to providing unparalleled experiences for travelers worldwide.
-    With a reputation for excellence and a dedication to customer
-    satisfaction, we offer a comprehensive range of services to make
-    your travel dreams a reality.
-  </p>
-  <p>
-    Whether you're seeking adventure, relaxation, or cultural
-    immersion, <span className="important">Travel Tribe</span> has you
-    covered. Our team of experienced professionals meticulously
-    curates every aspect of your journey, ensuring a seamless and
-    unforgettable experience from start to finish.
-  </p>
-</div>
-
+          <div className="section-content" style={{ textAlign: "justify" }}>
+            <p>
+              Travel Tribe is the premier travel and tourism company, committed
+              to providing unparalleled experiences for travelers worldwide.
+              With a reputation for excellence and a dedication to customer
+              satisfaction, we offer a comprehensive range of services to make
+              your travel dreams a reality. Whether you're seeking adventure, relaxation, or cultural
+              immersion, <span className="important">Travel Tribe</span> has you
+              covered.
+            </p>
+          </div>
         </div>
         <h1 className="student-heading">
-         <i class="fa-solid fa-sun fa-spin fa-spin-reverse"></i> Our Services{" "}
+          <i className="fa-solid fa-sun fa-spin fa-spin-reverse"></i> Our Services{" "}
         </h1>
         {/* Additional Cards */}
         <div className="cards-section">
-          <div className="card">
-          <i style={{marginBottom:"7px"}} class="fa-solid fa-calendar-check fa-2x"></i>
+          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+            <i style={{ marginBottom: "7px" }} class="fa-solid fa-calendar-check fa-2x"></i>
             <h2> Destination Booking</h2>
           </div>
-          <div className="card">
-          <i class="fa-solid fa-star fa-2x"></i>
+          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+            <i class="fa-solid fa-star fa-2x"></i>
             <h2> Popular Packages</h2>
           </div>
-          <div className="card">
-          <i class="fa-solid fa-car  fa-2x"></i>
+          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+            <i class="fa-solid fa-car  fa-2x"></i>
             <h2> Vehicle Service</h2>
           </div>
-          <div className="card">
-          <i class="fa-solid fa-shield fa-2x"></i>
-            <h2> Seucure Payment</h2>
+          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+            <i class="fa-solid fa-shield fa-2x"></i>
+            <h2> Secure Payment</h2>
           </div>
         </div>
         <div className="section student-section">
           <h1 className="student-heading">Special Packages for Students</h1>
-          <div className="section-content" style={{ textAlign: 'justify' }}>
+          <div className="section-content" style={{ textAlign: "justify" }}>
             <p>
               At <span className="important">Travel Tribe</span>, we understand
-              the importance of exploration and discovery for students. That's
+              the importance of exploration and discovery for<span className="important"> Students</span>. That's
               why we offer special packages tailored specifically for student
               travelers. These packages combine educational opportunities with
               exciting adventures, providing students with enriching experiences
               that they'll cherish for a lifetime.
-            </p>
-            <p>
-              Whether it's a cultural exchange program, an eco-adventure, or a
-              study abroad excursion, our student packages cater to diverse
-              interests and budgets. Join us on an unforgettable journey and
-              unlock new horizons with{" "}
-              <span className="important">Travel Tribe</span>.
             </p>
           </div>
         </div>
