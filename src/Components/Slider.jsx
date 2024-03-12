@@ -12,8 +12,8 @@ function Slider() {
         <Carousel.Item>
           <img src={s1} alt="First slide" className="d-block w-100" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Sajek Valley</h3>
+            <p>Nature's tranquil haven amidst Bangladesh's green hills.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
