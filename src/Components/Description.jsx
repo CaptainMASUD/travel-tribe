@@ -46,7 +46,7 @@ function Description() {
         <div className="cards-section">
           <div className="card">
           <i style={{marginBottom:"7px"}} class="fa-solid fa-calendar-check fa-2x"></i>
-            <h2> Event Booking</h2>
+            <h2> Destination Booking</h2>
           </div>
           <div className="card">
           <i class="fa-solid fa-star fa-2x"></i>
