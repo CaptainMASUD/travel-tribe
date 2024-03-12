@@ -144,7 +144,7 @@ function AboutUs() {
                   alt="CEO image"
                 />
                 <h4>Masudul Alam</h4>
-                <p>CEO & Founder</p>
+                <p>CEO & Developer</p>
               </div>
             </Col>
             <Col md={4}>
@@ -155,8 +155,10 @@ function AboutUs() {
                   className="rounded-circle  bordered-image i2"
                   style={{ width: "120px", height: "120px" }}
                 />
-                <h4>Ayan Nandy</h4>
-                <p>Partner</p>
+                <h4>Ayan Nandy Nirjan</h4>
+
+                <p>Research & Development (R & D)</p>
+                
               </div>
             </Col>
             <Col md={4}>
@@ -167,8 +169,9 @@ function AboutUs() {
                   className="rounded-circle  bordered-image i3"
                   style={{ width: "120px", height: "120px" }}
                 />
-                <h4>Mushfiq</h4>
-                <p>Partner</p>
+                <h4>Mushfiqur Rahman</h4>
+
+                <p>Resources & Connections</p>
               </div>
             </Col>
           </Row>
