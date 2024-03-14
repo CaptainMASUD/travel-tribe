@@ -605,6 +605,7 @@ body {
   border: 1px solid #e89a46 !important;
   color: #000000 !important;
 
+
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -831,6 +832,13 @@ body {
   color: #000000;
   font-size: 2rem;
 }
+.cpmain .cusbtn1:hover{
+  background-color: #4c246f !important;
+}
+.cpmain .btn3:hover{
+  background-color: #4c246f !important;
+}
+
 .cpmain tbody {
   box-shadow: 5px 5px 10px rgb(144, 140, 140) !important;
   border-radius: 10px !important;

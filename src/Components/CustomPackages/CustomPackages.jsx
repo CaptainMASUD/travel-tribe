@@ -214,8 +214,8 @@ function CustomPackages() {
             </tbody>
           </table>
           <div className="text-center">
-            <button className="btn btn-primary mr-2 mt-4 cusbtn1" onClick={handleConfirm}>Confirm</button>
-            <button className="btn btn-danger mt-4 cusbtn2" onClick={handleDelete}>Delete</button>
+            <button className="btn btn-primary mr-2 mt-4 cusbtn1" onClick={handleConfirm} style={{backgroundColor:"#7743DB",borderRadius:"3px",border:"none"}}>Confirm</button>
+            <button className="btn btn-danger mt-4 cusbtn2" onClick={handleDelete} style={{borderRadius:"3px"}} >Cancel Package</button>
           </div>
         </div>
       </div>
@@ -279,7 +279,7 @@ function CustomPackages() {
               </tbody>
             </table>
             <div className="text-center">
-              <button className="btn btn-success" onClick={handlePayNow}>Pay Now</button>
+              <button className="btn btn3 btn-success" onClick={handlePayNow} style={{backgroundColor:"#7743DB",border:"none",borderRadius:"3px"}}>Pay Now</button>
             </div>
           </div>
         </div>
