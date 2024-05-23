@@ -2,7 +2,7 @@ body {
     font-size: 1.0 rem !important;
     font-family: "Fredoka", sans-serif !important;
     /* background-color: rgb(248, 246, 218) !important;   */
-    background-color: #D2E3C8 !important;
+    background-color: #ffffff !important;
     margin: 0 !important;
     scroll-behavior: smooth !important;
 } 
@@ -256,7 +256,7 @@ body {
     align-items: center !important;
     text-align: center;
     overflow: hidden;
-    box-shadow: 4px 4px 10px  gray !important;
+    box-shadow: 0px 3px 5px  gray !important;
     transition: 0.5s;
   }
   
@@ -391,13 +391,14 @@ body {
   float: left;
   margin-right: 50px;
   border-radius: 10px;
-  box-shadow: 4px  4px 10px rgb(187, 187, 187);
   transition: 0.6s;
   cursor: pointer;
 }
 .wrmain img:hover{
-  transform: scale(1.04);
+  transform: scale(1.03);
   box-shadow: none;
+  box-shadow: 8px  10px 20px rgba(160, 160, 160, 0.778);
+
 }
 
 .wrbody2 {
@@ -416,9 +417,9 @@ body {
 .wrapper2 img {
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: -4px  4px 10px rgb(187, 187, 187);
   transition: 0.6s;
   cursor: pointer;
+
 }
 
 .wrapper2 .textbox2 {
@@ -550,21 +551,23 @@ body {
 
 .dmian .cards-section .card{
   background-color: #ffffff !important; 
-  box-shadow: 4px 4px 5px gray !important;
+  box-shadow: 0px 0px 0px gray !important;
   border: none !important;
-  background-color: #170b21 !important;
-  color: white;
+  background-color: #fefefe !important;
+  color: black;
+  transition: 0.5s;
 }
 .dmian .cards-section .card:hover{
-  transform: scale(1) !important;
+  transform: scale(1.005) !important;
+  box-shadow: 7px 7px 20px rgb(176, 174, 174) !important;
 }
 .dmian .cards-section .card button{
-  color: white !important;
-  border: 1px solid #7743DB !important;
+  color: rgb(21, 17, 17) !important;
+  border: 1px solid #0e0d0f !important;
 }
 .dmian .cards-section .card button:hover{
-  background-color: #7743DB !important;
-  border: 1px solid #7743DB !important;
+  background-color: #241a35 !important;
+  border: 1px solid transparent !important;
 }
 .dmian .ch{
   font-size: 2.1rem;
@@ -954,7 +957,6 @@ body {
   font-size: 1.2rem;
 }
 .homecolabmain .card{
-  box-shadow: 4px 4px 4px gray !important;
   background-color: #352F44 !important;
   margin-bottom: 80px !important;
   color: white !important;
@@ -1188,22 +1190,22 @@ body {
   border-radius: 10px;
 }
 .about-us .services .c1{
-  background-color: #7cc1558b !important;
+  background-color: #ffffff !important;
 }
 .about-us .services .c2{
-  background-color: #bab6498b !important;
+  background-color: #ffffff !important;
 }
 .about-us .services .c3{
-  background-color: #6250b98b !important;
+  background-color: #ffffff !important;
 }
 .about-us .collaborations .c4{
-  background-color: #fbee018b !important;
+  background-color: #ffffff !important;
 }
 .about-us .collaborations .c5{
-  background-color: #f4d23b8b !important;
+  background-color: #ffffff !important;
 }
 .about-us .collaborations .c6{
-  background-color: #ba54008b !important;
+  background-color: #ffffff !important;
 }
 .about-us .service-card:hover::before {
   content: '';
@@ -1630,3 +1632,10 @@ body {
  }
  /* Forget Passwrod ends */
 
+.card{
+  box-shadow: none !important;
+}
+.card:hover{
+  box-shadow: 5px 5px 15px rgb(162, 162, 162) !important;
+  transform: scale(1.03) !important;
+}

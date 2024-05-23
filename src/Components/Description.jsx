@@ -36,38 +36,26 @@ function Description() {
         <h1 className="student-heading">
           <i className="fa-solid fa-sun fa-spin fa-spin-reverse"></i> Our Services{" "}
         </h1>
-        {/* Additional Cards */}
+        {/* Button Cards with Logos */}
         <div className="cards-section">
-          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+          <button className="card" style={{ animation: "fade-in 0.5s forwards" }}>
             <i style={{ marginBottom: "7px" }} class="fa-solid fa-calendar-check fa-2x"></i>
             <h2> Destination Booking</h2>
-          </div>
-          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+          </button>
+          <button className="card" style={{ animation: "fade-in 0.5s forwards" }}>
             <i class="fa-solid fa-star fa-2x"></i>
             <h2> Popular Tour Packages</h2>
-          </div>
-          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+          </button>
+          <button className="card" style={{ animation: "fade-in 0.5s forwards" }}>
             <i class="fa-solid fa-car  fa-2x"></i>
             <h2> Vehicle Service</h2>
-          </div>
-          <div className="card" style={{ animation: "fade-in 0.5s forwards" }}>
+          </button>
+          <button className="card" style={{ animation: "fade-in 0.5s forwards" }}>
             <i class="fa-solid fa-shield fa-2x"></i>
             <h2> Secure Payment</h2>
-          </div>
+          </button>
         </div>
-        <div className="section student-section">
-          <h1 className="student-heading">Special Packages for Students</h1>
-          <div className="section-content" style={{ textAlign: "justify" }}>
-            <p>
-              At <span className="important">Travel Tribe</span>, we understand
-              the importance of exploration and discovery for<span className="important"> Students</span>. That's
-              why we offer special packages tailored specifically for student
-              travelers. These packages combine educational opportunities with
-              exciting adventures, providing students with enriching experiences
-              that they'll cherish for a lifetime.
-            </p>
-          </div>
-        </div>
+       
         <h1 className="student-heading">
           <i className="fa-brands fa-servicestack fa-bounce"></i> Our Packages{" "}
         </h1>

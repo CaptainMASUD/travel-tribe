@@ -5,14 +5,14 @@ import '../Components.css';
 function Footer() {
   const location = useLocation();
 
-  const handleprofileclick =()=>{
+  const handleprofileclick = () => {
     window.open("https://github.com/CaptainMASUD")
   }
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo(0, 0);
     };
-    
+
     scrollToTop();
 
     return () => {
@@ -59,7 +59,7 @@ function Footer() {
         <div className="row">
           <div className="col">
             <div className="footer-bottom">
-              &copy; 2024 Travel Tribe | Designed by <span  style={{color:"#aaa",textDecoration:"none",cursor:"pointer"}} onClick={handleprofileclick}>Masudul ALam</span>
+              &copy; 2024 Travel Tribe | Designed by <span className="profile-link" onClick={handleprofileclick}>Masudul Alam</span>
             </div>
           </div>
         </div>
