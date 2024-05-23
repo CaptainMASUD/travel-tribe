@@ -1584,20 +1584,20 @@ body {
  @keyframes glow {
   0% {
     opacity: 0.5;
-    color: #ff0000; /* Start with red */
+    color: #5f4170; /* Start with red */
   }
   25% {
-    color: #00ff00; /* Transition to green */
+    color: #969696; /* Transition to green */
   }
   50% {
-    color: #0000ff; /* Transition to blue */
+    color: #5d4e6f; /* Transition to blue */
   }
   75% {
-    color: #ffff00; /* Transition to yellow */
+    color: #8d8d8d; /* Transition to yellow */
   }
   100% {
     opacity: 1;
-    color: #ff0000; /* Back to red */
+    color: #5b4768; /* Back to red */
   }
 }
 
