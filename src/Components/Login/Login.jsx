@@ -56,8 +56,7 @@ function Login() {
               margin: "50px auto",
               background: modalColor,
               color: "white",
-              borderRadius: "5px",
-              border: `2px solid ${modalTableBorderColor}`,
+              borderRadius: "5px"
             }}
           >
             <tbody>

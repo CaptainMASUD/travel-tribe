@@ -559,7 +559,7 @@ body {
 }
 .dmian .cards-section .card:hover{
   transform: scale(1.005) !important;
-  box-shadow: 7px 7px 20px rgb(176, 174, 174) !important;
+  box-shadow: 8px 8px 20px rgba(176, 174, 174, 0.605) !important;
 }
 .dmian .cards-section .card button{
   color: rgb(21, 17, 17) !important;
@@ -861,24 +861,26 @@ body {
 .homecolabmain .card button{
   
   background-color: transparent !important;
-  border: 1px solid #7743DB !important;
-  color: #7743DB;
+  border: 1px solid #141316 !important;
+  color: #211f24;
 }
 .homecolabmain .card .btn2{
   
-  background-color: #7743DB !important;
+  background-color: #1e1c20 !important;
   color: white;
   border: none !important;
 }
 .homecolabmain .card .btn1:hover{
 
-  background-color: #7743DB !important;
+  background-color: #312f36 !important;
   color: white !important;
 }
 
 .homecolabmain .card:hover{
 
   transform: scale(1) !important;
+  box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.642) !important;
+  
 }
 .homecolabmain .evento{
   font-size: 2rem;
@@ -957,9 +959,9 @@ body {
   font-size: 1.2rem;
 }
 .homecolabmain .card{
-  background-color: #352F44 !important;
+  background-color: #ffffff !important;
   margin-bottom: 80px !important;
-  color: white !important;
+  color: black !important;
 }
 .homecolabmain button{
   margin-top: 10px;
@@ -996,13 +998,20 @@ body {
     width: 300px !important;
   }
 }
+
 /* homecllab ends */
 
 /* login and registration starts */
+.logmain table{
+  transition: 0.5s;
+}
+.logmain table:hover{
+  box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.719);
+}
 .logmain tbody{
-  box-shadow: 5px 5px 10px gray;
-  border-radius: 5px;
-  
+  /* box-shadow: 5px 5px 10px gray; */
+  background-color: #ffffff !important;
+  color: #31255f;
 }
 .logmain td{
   padding: 10px;
@@ -1010,9 +1019,14 @@ body {
 /* regis */
 }
 .regismain tbody{
-  box-shadow: 5px 5px 20px gray;
   border-radius: 8px;
-  
+  background-color: #ffffff;
+  transition: 0.5s !important;
+  color: #31255f;
+}
+.regismain tbody:hover{
+  box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.719);
+
 }
 .regismain td{
   padding: 10px;
@@ -1021,7 +1035,7 @@ body {
   transition: 0.5s;
 }
 .logmain tbody .forgotpass:hover{
-  color: #ebe856;
+  color: #222220;
   width: 200px !important;
   text-decoration: underline;
 }
@@ -1612,8 +1626,14 @@ body {
  /* Forget Passwrod starts */
  .frpass .card{
   transform: scale(1) !important;
+  transition: 0.5s;
+  color: #533a6c;
+  background-color: #ffffff;
+  border: none;
+ }
+ .frpass .card:hover{
   box-shadow: 4px 4px 10px rgb(174, 174, 174) !important;
-  background-color: #9797e6;
+  transform: scale(1) !important;
  }
  .frpass .card label{
   color: white;
