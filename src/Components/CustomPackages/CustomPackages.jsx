@@ -55,11 +55,15 @@ function CustomPackages() {
 
   const calculatePrice = () => {
     let price = 0;
+
     // Adjust price based on selected options
     if (selectedOptions.room === 'Deluxe') {
-      price += 200;
+      price = 5000;
+    } else if (selectedOptions.room === 'Standard') {
+      price = 3500;
+    } else if (selectedOptions.room === 'Simple') {
+      price = 1800;
     }
-    // Add more conditions for other options if needed
 
     // Calculate total price
     setTotalPrice(price);
@@ -124,6 +128,7 @@ function CustomPackages() {
                   <select className="form-control" name="room" value={selectedOptions.room} onChange={handleOptionChange}>
                     <option value="Standard">Standard</option>
                     <option value="Deluxe">Deluxe</option>
+                    <option value="Simple">Simple</option>
                     {/* Add more options if needed */}
                   </select>
                 </td>
@@ -204,8 +209,6 @@ function CustomPackages() {
                     <select className="form-control" name="transportType" value={selectedOptions.transportType} onChange={handleOptionChange}>
                       <option value="">Select transport type</option>
                       <option value="Bus">Bus</option>
-                      <option value="Train">Train</option>
-                      <option value="Plane">Plane</option>
                       <option value="Car">Car</option>
                     </select>
                   </td>

@@ -33,7 +33,7 @@ function PopularPak() {
   const randomHotelData = allHotelData[Math.floor(Math.random() * allHotelData.length)] || { name: 'Unknown Hotel', address: 'Unknown Address' };
 
   return (
-    <div className="container mt-4 cpmain">
+    <div className="container mt-4 cpmain cp">
       <h2 className="text-center mb-4">Popular Packages</h2>
       <div className="row justify-content-center mt-4">
         <div className="col-md-6">

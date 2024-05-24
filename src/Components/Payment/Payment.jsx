@@ -301,7 +301,7 @@ function Payment() {
             </div>
           )}
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 spain">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">
