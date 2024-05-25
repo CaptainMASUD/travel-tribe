@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import s1 from './images/slider/s1.png';
-import img1 from './images/img1.jpg'
-import img3 from './images/img3.jpg';
+import img1 from './images/slider/1.jpg'
+import img3 from './images/slider/2.jpg';
 import "./Components.css";
 
 function Slider() {
@@ -19,16 +19,16 @@ function Slider() {
         <Carousel.Item>
           <img src={img1} alt="Second slide" className="d-block w-100" />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Bandarban </h3>
+            <p>Bandarban is a city in the Chittagong Hill Tracts of southeastern Bangladesh.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={img3} alt="Third slide" className="d-block w-100" />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Kuakata</h3>
 
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <p>Kuakata beach is a sandy expanse 18 kilometres long and 3 kilometres wide. From the beach one can have an unobstructed view of both sunrise and sunset over the Bay of Bengal.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
