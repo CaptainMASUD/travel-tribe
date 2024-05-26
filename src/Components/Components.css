@@ -458,6 +458,7 @@ body::-webkit-scrollbar-thumb {
 .img-container {
   position: relative;
   width: 100%;
+  overflow: hidden; /* Ensure the image doesn't overflow its container */
 }
 
 .img-container img {
@@ -465,9 +466,15 @@ body::-webkit-scrollbar-thumb {
   max-height: 300px; 
   object-fit: cover; 
   border-radius: 10px;
-  transition: 0.6s;
+  transition: transform 0.6s, border-radius 0.6s; /* Apply transition to transform and border-radius */
   cursor: pointer;
 }
+
+.img-container:hover img {
+  transform: scale(1.1); /* Zoom in by 10% on hover */
+  border-radius: 10px; /* Maintain the border-radius */
+}
+
 
 .love-button {
   position: absolute;
@@ -954,12 +961,12 @@ dmian
 .homecolabmain .card:hover{
   border: transparent;
   transform: scale(1) !important;
-  box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.511) !important;
+  
   
 }
 .homecolabmain .evento{
   font-size: 2rem;
-  color: rgb(165, 71, 40);
+  color: rgb(199, 119, 92);
 }
 @keyframes glowing {
   0% {
@@ -1037,6 +1044,8 @@ dmian
   background-color: #ffffff !important;
   margin-bottom: 80px !important;
   color: black !important;
+  box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.355) !important;
+  border: none !important;
 }
 .homecolabmain button{
   margin-top: 10px;
@@ -1048,7 +1057,7 @@ dmian
   text-align: center;
   margin-bottom: 50px;
   margin-top: 50px;
-  color: brown;
+  color: rgb(225, 145, 116);
 }
 .homecolabmain .fade-in {
   animation: fadeInAnimation 0.5s ease-in-out forwards;

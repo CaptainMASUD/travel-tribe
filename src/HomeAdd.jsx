@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import himg1 from "./Components/images/Homeadd/sajek.jpg";
 import himg2 from "./Components/images/Homeadd/sylhet.jpg";
-import img3 from "./Components/images/slider/1.jpg";
+import img3 from "./Components/images/Homeadd/bandarban.jpg";
 import img4 from "./Components/images/slider/2.jpg";
+import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+
 
 function HomeAdd() {
   const [loved, setLoved] = useState([false, false, false, false]);
@@ -61,7 +63,7 @@ function HomeAdd() {
               <div className="textbox">
                 <h2>
                   <span style={{ color: "white" }}>{place.name}</span>{" "}
-                  <i className="fa-solid fa-angles-right" style={{ color: "white" }}></i>
+                  <MdOutlineKeyboardDoubleArrowDown style={{color:"white"}} />
                 </h2>
                 <p style={{ fontSize: "1.15rem", textAlign: "justify", fontWeight: "400" }}>
                   {place.description}
