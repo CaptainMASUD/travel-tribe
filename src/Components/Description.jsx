@@ -56,9 +56,7 @@ function Description() {
           </button>
         </div>
        
-        <h1 className="student-heading">
-          <i className="fa-brands fa-servicestack fa-bounce"></i> Our Packages{" "}
-        </h1>
+
         {/* Cards Section */}
         <div className="cards-section">
           <div className="card">
