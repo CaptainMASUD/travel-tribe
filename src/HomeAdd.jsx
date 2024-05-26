@@ -41,9 +41,9 @@ function HomeAdd() {
   return (
     <>
       <header className="header">
-      <div class="animated-text-container" style={{textAlign:"center"}}>
-            <h1 class="animated-text">Look for Your Destinations</h1>
-      </div>
+        <div className="animated-text-container" style={{ textAlign: "center" }}>
+          <h1 className="animated-text">Look for Your Destinations</h1>
+        </div>
       </header>
       <div className="wrmain">
         {places.map((place, index) => (
@@ -61,7 +61,7 @@ function HomeAdd() {
               <div className="textbox">
                 <h2>
                   <span style={{ color: "white" }}>{place.name}</span>{" "}
-                  <i className="fa-solid fa-angles-right" style={{color:"white"}}></i>
+                  <i className="fa-solid fa-angles-right" style={{ color: "white" }}></i>
                 </h2>
                 <p style={{ fontSize: "1.15rem", textAlign: "justify", fontWeight: "400" }}>
                   {place.description}
