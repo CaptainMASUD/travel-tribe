@@ -27,7 +27,7 @@ const DualVideoPlayer = () => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/hVU9Jh_4gT4?si=SohzOen5SeIuC4Gg"
+              src="https://www.youtube.com/embed/rn0nkEZdoRg?si=7mpEnGldtWasioxI" 
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
