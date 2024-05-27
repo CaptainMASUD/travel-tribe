@@ -796,37 +796,59 @@ body::-webkit-scrollbar-thumb {
 
 /* Studentoffer starts */
 
-.scardmain .card{
-  margin: 0 auto !important;
-  margin-top: 20px !important;
+/* Updated CSS for card container */
+.scardmain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 
+/* Updated CSS for individual cards */
+.scardmain .card {
+  margin-top: 20px !important;
+  width: calc(25% - 20px);
+  transition: transform 0.3s ease-in-out;
 }
-.scardmain .card:hover{
-  transform: scale(1.04) !important;
+
+/* Improved hover effect */
+.scardmain .card:hover {
+  transform: scale(1.04);
 }
-.scardmain .btn{
+
+/* Updated button styles */
+.scardmain .btn {
   background-color: transparent !important;
   border: 1px solid #7743DB !important;
   height: 40px;
   color: #6967c3;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
-.scardmain .btn:hover{
+
+.scardmain .btn:hover {
   background-color: #7743DB !important;
   color: white;
+  border-color: #7743DB !important;
 }
-.stinput{
+
+/* Updated input styles */
+.stinput {
   margin-bottom: 50px;
 }
-.stinput input{
+
+.stinput input {
   background-color: rgb(211, 196, 191);
   border-radius: 10px;
-   transition: 0.5s;
+  transition: background-color 0.5s ease-in-out;
 }
-.stfilter{
+
+/* Updated filter styles */
+.stfilter {
   background-color: #d0a769;
   margin-top: -100px;
 }
-.stfilter:focus{
+
+.stfilter:focus {
   background-color: #d0a769;
 }
 
@@ -848,39 +870,40 @@ body::-webkit-scrollbar-thumb {
   margin-top: 20px !important;
 }
 
-@media screen and (max-width: 752px){
-  .scardmain .card{
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 752px) {
+  .scardmain .card {
     position: relative;
-    /* left: 30px; */
   }
-  .stofferin .fltmain{
+  .stofferin .fltmain {
     background-color: rgb(206, 196, 196);
     margin-top: -35px !important;
   }
-
-  .stofferin .ss1{
-
+  .stofferin .ss1 {
     width: 300px !important;
   }
-  .stofferin input{
+  .stofferin input {
     width: 300px !important;
     margin-top: 10px !important;
   }
-  .stofferin .btn1{
+  .stofferin .btn1 {
     margin-top: 20px;
   }
-
 }
-.stofferin .btn1{
+
+/* Button styles for claim offer */
+.stofferin .btn1 {
   background-color: #7743DB;
   border: none;
   border-radius: 3px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.stofferin .btn1:hover{
+
+.stofferin .btn1:hover {
   background-color: #6967c3;
-  border: none;
   color: white;
 }
+
 /* Studentoffer ends */
 
 /* custom packages starts */
@@ -1754,3 +1777,37 @@ dmian
   box-shadow: 5px 5px 15px rgb(162, 162, 162) !important;
   transform: scale(1.03) !important;
 }
+
+/* homevideo starts  */
+.dual-video-container {
+  display: flex;
+}
+
+.video-wrapper {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+}
+
+.video-controls {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-pause-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 36px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .video-wrapper iframe {
+    height: 200px; /* Adjust the height as needed */
+  }
+}
+
+/* homevideo ends  */
